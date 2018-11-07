@@ -77,3 +77,21 @@ You could run unit tests with the help of IntelliJ. But it is also possible to r
 
 If you just want to build your code without running test. Please use `./gradlew build -x test
 `
+
+
+## Summary
+
+* should_be_immutable(), all_modification_method_will_create_new_string(), will_create_new_string_when_concat()
+1. String is immutable, new string is create after any modified https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
+1. It expected a Optional empty
+1. The 2 strings are not same, so = false
+1. NO
+
+
+* should_taken_string_apart(), should_taken_string_apart_continued()
+1. Use substring method from String class https://docs.oracle.com/javase/7/docs/api/java/lang/String.html
+1. It expected null
+1. Use substring to taken a String apart
+1. NO
+
+

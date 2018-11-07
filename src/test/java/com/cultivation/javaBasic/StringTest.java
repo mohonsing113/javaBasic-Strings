@@ -18,7 +18,7 @@ class StringTest {
         //
         // It is really easy to pass the test. But you have to tell why.
         // <--start
-        final Optional<Boolean> areSame = Optional.empty();
+        final Optional<Boolean> areSame = Optional.of(false);
         // --end-->
 
         assertEquals("The new string", modifiedString);
@@ -35,7 +35,7 @@ class StringTest {
         //
         // It is really easy to pass the test. But you have to tell why.
         // <--start
-        final Optional<Boolean> areSame = Optional.empty();
+        final Optional<Boolean> areSame = Optional.of(false);
         // --end-->
 
         assertEquals("The string with tailing space.", modifiedString);
@@ -53,7 +53,7 @@ class StringTest {
         //
         // It is really easy to pass the test. But you have to tell why.
         // <--start
-        final Optional<Boolean> areSame = Optional.empty();
+        final Optional<Boolean> areSame = Optional.of(false);
         // --end-->
 
         assertEquals("Part one. Part two.", originalString);
@@ -67,7 +67,7 @@ class StringTest {
 
         // TODO: Take part of the original string according to expectation.
         // <--start
-        final String partOfString = null;
+        final String partOfString = originalString.substring(5);
         // --end-->
 
         final String expectedString = "is great";
@@ -82,7 +82,7 @@ class StringTest {
 
         // TODO: Take part of the original string according to expectation.
         // <--start
-        final String partOfString = null;
+        final String partOfString = originalString.substring(5,7);;
         // --end-->
 
         final String expectedString = "is";
@@ -105,7 +105,7 @@ class StringTest {
 
         // TODO: Extract words in the sentence.
         // <--Start
-        String[] words = null;
+        String[] words = sentence.split(" ");
         // --End-->
 
         assertArrayEquals(new String[] {"This", "is", "Mike"}, words);
@@ -118,7 +118,7 @@ class StringTest {
 
         // TODO: Extract words in the sentence.
         // <--Start
-        String[] words = null;
+        String[] words = sentence.split("/");
         // --End-->
 
         assertArrayEquals(new String[] {"This", "is", "Mike"}, words);
@@ -133,6 +133,18 @@ class StringTest {
         // TODO: Create string using StringBuilder
         // <--Start
         StringBuilder builder = new StringBuilder();
+        for(int i=0;i<height;i++){
+            for(int j=0;j<width;j++){
+                if(j==0 || j== width-1){
+                    builder.append("|");
+                }else if (i==0 || i== height-1){
+                    builder.append("-");
+                }else {
+                    builder.append(" ");
+                }
+            }
+            builder.append("\n");
+        }
         // --End-->
 
         final String expected =
